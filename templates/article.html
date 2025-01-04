@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <a href="{{ url_for('index') }}">Назад к списку статей</a>
+    <h1>{{ title }}</h1>
+    <div>
+        {{ content|safe }}
+    </div>
+    <!-- Call to Action (CTA) -->
+    <div class="cta">
+        <h2>Закажите своего бота!</h2>
+        <p>Нужен телеграм-бот для вашего бизнеса или проекта?</p>
+        <p>Свяжитесь с нами в Telegram 👇:</p>
+        <a href="https://t.me/your_telegram_channel" target="_blank" class="cta-button">
+            <i class="fab fa-telegram"></i> Написать в Telegram
+        </a>
+    </div>
+</body>
+</html>
