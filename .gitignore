@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 venv/
 __pycache__/
 
+=======
+>>>>>>> feature-branch
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -177,5 +180,3 @@ cython_debug/
 contents/article*.md
 # Не игнорировать саму папку contents
 !contents/
-
-
