@@ -11,12 +11,19 @@
 <body>
     <a href="{{ url_for('index') }}">Назад к списку статей</a>
     <h1>{{ title }}</h1>
-    <div>
-        <img src="{{ image_url }}" alt="{{ title }}">
-    </div>
-    <div>
-        {{ content|safe }}
-    </div>
+
+   <!-- Изображение статьи -->
+   {% if image_url %}
+   <div class="article-image">
+        <img src="{{ image_url }}" alt="{{ title }}" loading="lazy">
+   </div>
+   {% endif %}
+
+   <!-- Тело статьи -->
+   <div class="article-content">
+       {{ content|safe }}
+   </div>
+
     <!-- Call to Action (CTA) -->
     <div class="cta">
         <h2>Закажите своего бота!</h2>

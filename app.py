@@ -21,7 +21,6 @@ def get_articles():
             slug = custom_slugify(title)  # Генерируем slug на основе заголовка
             articles.append({'name': name, 'filename': filename, 'title': title, 'slug': slug})
     articles =sorted(articles, key=lambda x: x['filename'])
-    print(articles)
     return articles
 
 def get_article_content(filename, header=None):
